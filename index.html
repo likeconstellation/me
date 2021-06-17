@@ -1,0 +1,388 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>동읍나들이</title>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css'>
+
+	<style>
+  @font-face{ font-family:나눔바른펜;
+    src:url("NanumBarunpenR.ttf") format("truetype");
+    font-style:nomal;
+    font-weight: nomal;
+  }
+  @font-face{ font-family:나눔바른펜;
+    src:url("NanumBarunpenB.ttf") format("truetype");
+    font-style:nomal;
+    font-weight: bold;
+  }
+
+
+body{
+text-align: center;
+font-size: 2rem;
+}
+
+
+    .logo {
+
+width: 70%;
+      margin: 0 auto;
+      margin-left: -3%;
+
+
+    }
+
+
+		.button {
+			width: 50%;
+			margin: 0 auto;
+
+		}
+
+		big {
+
+			font-family: mapo한아름;
+			font-size: 4rem;
+
+		}
+
+		small {
+
+			margin: 0 auto;
+
+
+		}
+
+span {
+	font-size: 1.7rem;
+	margin: 0 auto;
+text-align: center;
+	font-family: 나눔바른펜;
+  z-index: 3;
+
+}
+
+p {
+	font-size: 2.2rem;
+	margin: 0 auto;
+	margin-left: 20%;
+	margin-right: 20%;
+	text-align: center;
+	font-family: 나눔바른펜;
+}
+
+.content {
+  font-size: 2.7rem;
+  margin: 0 auto;
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
+  font-family: 나눔바른펜;
+  z-index: 2;
+}
+
+
+
+.section{
+ background-color: #e8f5fd;
+width: 100%;
+z-index: 2;
+font-family: 나눔바른펜;
+font-size: 2.7rem;
+
+}
+
+
+b {
+  font-family: 나눔바른펜;
+  font-size: 3rem;
+
+}
+
+
+
+
+nav {
+    overflow: hidden;
+    position: fixed;
+    transform: translateX(-300px);
+    height: 100%;
+    width: 600px;
+	top: 0px;
+
+    transition: all 800ms cubic-bezier(.8, 0, .33, 1);
+    border-radius: 0% 0% 100% 50%;
+	z-index: 2;
+}
+
+nav.nav-open {
+    transform: translateX(0px);
+    border-radius: 0% 0% 0% 0%;
+	 background: #588396;
+}
+
+nav .menu-btn {
+    position: absolute;
+   top: 5%;
+    right: 30%;
+    padding: 0;
+    width: 50px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+nav .menu-btn .line {
+    padding: 0;
+    width: 30px;
+    background: black;
+    height: 6px;
+    margin: 5px 0;
+    transition: all 700ms cubic-bezier(.9, 0, .33, 1);
+}
+
+nav .menu-btn .line.line--1 {
+    width: 50px;
+    transform: rotate(0) translateY(0);
+}
+
+nav .menu-btn .line.line--1.line-cross {
+    width: 30px;
+    transform: rotate(45deg) translateY(0px);
+	 background: #588396;
+}
+
+nav .menu-btn .line.line--2 {
+    width: 40px;
+    transform: translateX(0);
+}
+
+nav .menu-btn .line.line--2.line-fade-out {
+    width: 28px;
+    transform: translate(30px);
+    opacity: 0;
+}
+
+nav .menu-btn .line.line--3 {
+    width: 30px;
+    transform: rotate(0) translateY(0);
+}
+
+nav .menu-btn .line.line--3.line-cross {
+    width: 30px;
+    transform: rotate(-45deg) translateY(-15px);
+	 background: #588396;
+}
+
+nav .nav-links {
+    position: absolute;
+    left: 0px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: all 900ms cubic-bezier(.9, 0, .33, 1);
+}
+
+nav .nav-links.fade-in {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+nav .nav-links .link {
+    margin: 20px 0;
+    text-decoration: none;
+    font-family: Algerian;
+    color: lightyellow;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    transition: all 300ms cubic-bezier(.9, 0, .33, 1);
+}
+
+nav .nav-links .link:hover {
+    color: #e8f5fd;
+}
+
+
+.back {
+  position: fixed;
+  top: 0;
+  background-color: #93a468;
+  width: 100%;
+  height: 12%;
+  text-align: center;
+  z-index: 1;
+  font-size: 3.5rem;
+  font-family: 나눔바른펜;
+}
+
+
+
+
+
+@media (max-width: 640px){
+}
+
+
+
+
+.buttonL {
+  width: auto;
+  background-color: #88d7ff;
+  border: none;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2.5rem;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 10px 0 0 10px;
+}
+
+.buttonR {
+  width: auto;
+  background-color: #88d7ff;
+  border: none;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2.5rem;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 0 10px 10px 0;
+}
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+
+
+
+
+	<div class="logo"> <img src="images/dahoblur1.png" alt="" width="150%"> </div>
+
+
+  <br />
+
+		<br /><b>가족, 친구 그리고 연인과 함께 <br />주말 드라이브 어떠신가요?</b>
+			<br />	<br />	<br />
+
+
+
+
+      <nav>
+      	<div class="menu-btn">
+      		<div class="line line--1"></div>
+      		<div class="line line--2"></div>
+      		<div class="line line--3"></div>
+      	</div>
+
+      	<div class="nav-links">
+                              <p><big</big> </p>
+
+      		<a href="index.html" class="link"><u>홈</u></a>
+      		<a href="tree.html" class="link">신방리 음나무군</a>
+      		<a href="dahori.html" class="link">다호리 고분군 마을</a>
+          <a href="junam.html" class="link">주남저수지</a>
+          <a href="dangam.html" class="link">창원 단감 테마공원</a>
+          <a href="juckdong.html" class="link">죽동마을 메타세콰이어길</a>
+      	</div>
+      </nav>
+
+
+
+      <div class="section">
+      	<br />
+
+      		<b>동읍<br />
+       &#149; &#149; &#149;  &#149;</b>
+
+      		<br />
+      	<div class="content">
+          창원시 의창구에 있는 읍으로 <br />
+          대한민국에서 유일하게 이름이<br /> 한 글자인 읍이다<br /><br />
+         동쪽은 김해시 진영읍 <br />
+         서쪽은 창원시 북면<br />
+         남쪽은 의안동과 사림동 <br />
+         북쪽은 밀양시와 창녕군에 접한다
+
+
+      </div>
+      <br />
+
+      </div>
+
+      <br /><br />
+
+      <div class="content">
+      <b>찾아오는 법<br />
+      &#149; &#149; &#149;  &#149;</b>
+      <br /><버스><br />
+
+김해와 진영 방면 140번 <br /><br />
+
+
+        창원시내 방면 <br /> 1번, 2번, 30번, 31번 32번, 36번, <br> 40번, 41번, 42번, 49번
+
+
+      <br /><br />
+      <자가용><br />
+      김해 -> 진영 -> 동읍삼거리 -> 우회전 <br /><br />
+      창원/마산 -> 도계동만남의 광장 -> 동읍 삼거리 -> 좌회전
+<br />
+
+      </div>
+
+
+
+
+      <br />	<br />
+      </div>
+
+      <div class="section">
+
+
+      		<br />
+      	<div class="content">
+
+          <a href="https://culture.changwon.go.kr/index.changwon?menuId=11010000">
+<div class="buttonL">
+
+창원시 관광지</div></a>
+
+<a href="http://culture.changwon.go.kr/index.changwon?menuId=13030100">
+<div class="buttonR">
+
+창원시 특산물</div></a>
+
+
+      </div>
+      <br />
+
+
+
+
+
+
+
+
+
+  <script  src="./script.js"></script>
+
+</body>
+</html>
